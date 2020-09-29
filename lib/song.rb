@@ -54,5 +54,6 @@ class Song
       music = self.new
       music.name = title
       music.artist_name = artist
+      music
       end
 end
