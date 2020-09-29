@@ -67,4 +67,10 @@ class Song
       music.artist_name = artist
       music.save
   end
+
+  def self.destory_all
+    @@all.clear
+  end
+
+
 end
