@@ -51,6 +51,7 @@ class Song
       data = songs.split(" - ")
       artist = data[0]
       title = data[1].chomp(".mp3")
+      self.new
       self.name = title
       self.artist_name = artist
       end
