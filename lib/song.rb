@@ -23,30 +23,30 @@ class Song
     song = self.new
     song.name = song_name
     song
-    end 
+  end 
   
-   def self.create_by_name(song_name)
+  def self.create_by_name(song_name)
     song = self.new
     song.name = song_name
     song.save
-    end 
+  end 
   
 
-    def self.find_by_name(name)
+  def self.find_by_name(name)
       @@all.find{|title| title.name == name}
-    end
+  end
  
-    def self.find_or_create_by_name(name)
+  def self.find_or_create_by_name(name)
       self.create_by_name(name)
       self.find_by_name(name)
-    end
+  end
     
-    def self.alphabetical
+  def self.alphabetical
       @@all.sort_by{|x| x.name}
       #binding.pry
-    end
+  end
 
-    def self.new_from_filename(mp3)
+  def self.new_from_filename(mp3)
       songs = mp3
       data = songs.split(" - ")
       artist = data[0]
@@ -55,9 +55,9 @@ class Song
       music.name = title
       music.artist_name = artist
       music
-      end
+  end
       
-      def self.create_from_filename(mp3)
+  def self.create_from_filename(mp3)
       songs = mp3
       data = songs.split(" - ")
       artist = data[0]
@@ -66,5 +66,5 @@ class Song
       music.name = title
       music.artist_name = artist
       music.save
-      end
+  end
 end
